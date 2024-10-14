@@ -1,0 +1,81 @@
+# ????
+server:
+  port: 81
+
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/health?characterEncoding=UTF-8
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    #???????
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    #?????????filters????????sql?????'wall'?????
+    filters: stat,wall,log4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+  jackson:
+    date-format: yyyy-MM-dd
+    time-zone: GMT+8
+  #redis??
+  redis:
+    host: 127.0.0.1
+
+  freemarker:
+    # ?????
+    suffix: .ftl
+    # ????
+    content-type: text/html
+    # ????
+    charset: UTF-8
+    # ????
+    cache: false
+    # ????
+    template-loader-path: classpath:/templates/
+#freemarker??????
+out_put_path: D:/IdeaProjects9/health_parent/health_mobile/src/main/resources/static/pages
+
+mybatis:
+  # ??????????
+  config-location: classpath:mybatis/mybatis-config.xml
+  # ??sql??????
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.liusp.pojo,com.liusp.entity
+
+#dubbo
+dubbo:
+  #?????????
+  application:
+    name: health_service_provider
+  #??????
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  #?????????,??????????????????20880
+  protocol:
+    port: 20888
+    name: dubbo
+  #??monitor??
+  monitor: registry
+
+#??????
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=counSql
+#????
+logging:
+  level:
+    com.liusp: debug
