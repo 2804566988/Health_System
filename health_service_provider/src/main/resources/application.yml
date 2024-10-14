@@ -1,4 +1,4 @@
-# ????
+# 应用名称
 server:
   port: 81
 
@@ -9,7 +9,7 @@ spring:
     url: jdbc:mysql://localhost:3306/health?characterEncoding=UTF-8
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-    #???????
+    #数据源其他配置
     initialSize: 5
     minIdle: 5
     maxActive: 20
@@ -21,7 +21,7 @@ spring:
     testOnBorrow: false
     testOnReturn: false
     poolPreparedStatements: true
-    #?????????filters????????sql?????'wall'?????
+    #配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
     filters: stat,wall,log4j
     maxPoolPreparedStatementPerConnectionSize: 20
     useGlobalDataSourceStat: true
@@ -29,53 +29,53 @@ spring:
   jackson:
     date-format: yyyy-MM-dd
     time-zone: GMT+8
-  #redis??
+  #redis配置
   redis:
     host: 127.0.0.1
 
   freemarker:
-    # ?????
+    # 模板后缀名
     suffix: .ftl
-    # ????
+    # 文档类型
     content-type: text/html
-    # ????
+    # 页面编码
     charset: UTF-8
-    # ????
+    # 页面缓存
     cache: false
-    # ????
+    # 模板路径
     template-loader-path: classpath:/templates/
-#freemarker??????
+#freemarker文件输出地址
 out_put_path: D:/IdeaProjects9/health_parent/health_mobile/src/main/resources/static/pages
 
 mybatis:
-  # ??????????
+  # 指定全局配置文件位置
   config-location: classpath:mybatis/mybatis-config.xml
-  # ??sql??????
+  # 指定sql映射文件位置
   mapper-locations: classpath:mybatis/mapper/*.xml
   type-aliases-package: com.liusp.pojo,com.liusp.entity
 
 #dubbo
 dubbo:
-  #?????????
+  #设置服务器应用名称
   application:
     name: health_service_provider
-  #??????
+  #指定注册中心
   registry:
     address: zookeeper://127.0.0.1:2181
-  #?????????,??????????????????20880
+  #指定通讯协议和端口,指定暴露服务的端口，如果不指定默认为20880
   protocol:
     port: 20888
     name: dubbo
-  #??monitor??
+  #添加monitor监控
   monitor: registry
 
-#??????
+#分页插件配置
 pagehelper:
   helper-dialect: mysql
   reasonable: true
   support-methods-arguments: true
   params: count=counSql
-#????
+#显示日志
 logging:
   level:
     com.liusp: debug
