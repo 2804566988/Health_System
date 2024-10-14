@@ -52,7 +52,7 @@ mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
   # 指定sql映射文件位置
   mapper-locations: classpath:mybatis/mapper/*.xml
-  type-aliases-package: com.liusp.pojo,com.liusp.entity
+  type-aliases-package: com.pzl.pojo,com.pzl.entity
 
 #dubbo
 dubbo:
@@ -78,4 +78,4 @@ pagehelper:
 #显示日志
 logging:
   level:
-    com.liusp: debug
+    com.pzl: debug

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 引入ElementUI样式 -->
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/vue.js"></script>
+    <!-- 引入ElementUI组件库 -->
+    <script src="../css/index.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <el-dropdown split-button type="primary">
+        默认尺寸
+        <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item>黄金糕</el-dropdown-item>
+            <el-dropdown-item>狮子头</el-dropdown-item>
+            <el-dropdown-item>螺蛳粉</el-dropdown-item>
+            <el-dropdown-item>双皮奶</el-dropdown-item>
+            <el-dropdown-item>蚵仔煎</el-dropdown-item>
+        </el-dropdown-menu>
+    </el-dropdown>
+</div>
+<script>
+    new Vue({
+        el:'#app'
+    });
+</script>
+</body>
+</html>

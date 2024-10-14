@@ -91,8 +91,8 @@
         <option value="Maven: io.netty:netty:3.7.0.Final" />
         <option value="Maven: org.apache.poi:poi:3.14" />
         <option value="Maven: com.qiniu:qiniu-java-sdk:7.7.0" />
-        <option value="Maven: com.squareup.okhttp3:okhttp:3.14.9" />
-        <option value="Maven: com.google.code.gson:gson:2.8.6" />
+        <option value="Maven: org.apache.commons:commons-lang3:3.10" />
+        <option value="Maven: javax.xml.bind:jaxb-api:2.3.1" />
         <option value="Maven: org.apache.poi:poi-ooxml:3.14" />
         <option value="Maven: org.apache.poi:poi-ooxml-schemas:3.14" />
         <option value="Maven: org.apache.xmlbeans:xmlbeans:2.6.0" />
@@ -104,7 +104,7 @@
         <option value="Maven: com.tencentcloudapi:tencentcloud-sdk-java:3.1.62" />
         <option value="Maven: com.squareup.okio:okio:1.12.0" />
         <option value="Maven: com.squareup.okhttp:okhttp:2.5.0" />
-        <option value="Maven: javax.xml.bind:jaxb-api:2.3.1" />
+        <option value="Maven: com.squareup.okhttp3:okhttp:3.14.9" />
         <option value="Maven: javax.activation:javax.activation-api:1.2.0" />
         <option value="Maven: org.springframework.boot:spring-boot-starter-freemarker:2.3.7.RELEASE" />
         <option value="Maven: org.freemarker:freemarker:2.3.30" />
@@ -125,7 +125,7 @@
         <option value="Maven: org.eclipse.jdt.core.compiler:ecj:4.4.2" />
         <option value="Maven: org.codehaus.castor:castor-xml:1.4.1" />
         <option value="Maven: org.codehaus.castor:castor-core:1.4.1" />
-        <option value="Maven: org.apache.commons:commons-lang3:3.10" />
+        <option value="Maven: com.google.code.gson:gson:2.8.6" />
         <option value="Maven: javax.inject:javax.inject:1" />
         <option value="Maven: commons-codec:commons-codec:1.14" />
         <option value="Maven: com.github.pagehelper:pagehelper-spring-boot-starter:1.2.5" />
