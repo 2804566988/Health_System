@@ -2,6 +2,8 @@ package com.pzl.dao;
 import com.github.pagehelper.Page;
 import com.pzl.pojo.CheckItem;
 
+import java.util.List;
+
 
 /**
  * 持久层Dao接口
@@ -13,4 +15,7 @@ public interface CheckItemDao {
 
     public void deleteById(Integer id);
     public long findCountByCheckItemId(Integer checkItemId);
+    public void edit(CheckItem checkItem);
+    public CheckItem findById(Integer id);
+
 }

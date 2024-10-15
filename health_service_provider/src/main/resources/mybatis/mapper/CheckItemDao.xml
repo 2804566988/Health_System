@@ -26,4 +26,40 @@
         select count(*) from t_checkgroup_checkitem where checkitem_id = #{checkitem_id}
     </select>
 
+    <!--编辑-->
+    <update id="edit" parameterType="com.pzl.pojo.CheckItem">
+        update t_checkitem
+        <set>
+            <if test="name != null">
+                name = #{name},
+            </if>
+            <if test="sex != null">
+                sex = #{sex},
+            </if>
+            <if test="code != null">
+                code = #{code},
+            </if>
+            <if test="age != null">
+                age = #{age},
+            </if>
+            <if test="price != null">
+                price = #{price},
+            </if>
+            <if test="type != null">
+                type = #{type},
+            </if>
+            <if test="attention != null">
+                attention = #{attention},
+            </if>
+            <if test="remark != null">
+                remark = #{remark},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <select id="findById" parameterType="int" resultType="com.pzl.pojo.CheckItem">
+        select * from t_checkitem where id = #{id}
+    </select>
+
 </mapper>

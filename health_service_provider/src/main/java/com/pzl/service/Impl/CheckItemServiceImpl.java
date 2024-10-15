@@ -11,6 +11,8 @@ import com.alibaba.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 
 @Service(interfaceClass = CheckItemService.class)
 @Transactional
@@ -23,7 +25,7 @@ public class CheckItemServiceImpl implements CheckItemService{
         checkItemDao.add(checkItem);
     }
 
-    @Override
+    //查询
     public PageResult pageQuery(Integer currentPage, Integer pageSize, String queryString) {
         //完成分页查询，基于myBatis框架提供的分页助手插件完成
         PageHelper.startPage(currentPage,pageSize);
@@ -43,5 +45,13 @@ public class CheckItemServiceImpl implements CheckItemService{
         checkItemDao.deleteById(id);
     }
 
+    //编辑
+    public void edit(CheckItem checkItem) {
+        checkItemDao.edit(checkItem);
+    }
+    //编辑回显表单
+    public CheckItem findById(Integer id) {
+        return checkItemDao.findById(id);
+    }
 
 }
