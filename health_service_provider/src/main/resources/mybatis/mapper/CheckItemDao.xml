@@ -16,4 +16,14 @@
             where code = #{value} or name = #{value}
         </if>
     </select>
+
+    <!--删除-->
+    <delete id="deleteById" parameterType="int">
+        delete from t_checkitem where id = #{id}
+    </delete>
+    <!--根据检查项id查询中间关系表-->
+    <select id="findCountByCheckItemId" resultType="long" parameterType="int">
+        select count(*) from t_checkgroup_checkitem where checkitem_id = #{checkitem_id}
+    </select>
+
 </mapper>

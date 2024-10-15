@@ -17,6 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class CheckItemServiceImpl implements CheckItemService{
     @Autowired
     private CheckItemDao checkItemDao;
+
     //新增
     public void add(CheckItem checkItem) {
         checkItemDao.add(checkItem);
@@ -29,4 +30,18 @@ public class CheckItemServiceImpl implements CheckItemService{
         Page<CheckItem> page = checkItemDao.selectByCondition(queryString);
         return new PageResult(page.getTotal(),page.getResult());
     }
+
+    //删除
+    @Override
+    public void delete(Integer id) throws RuntimeException{
+        //查询当前检查项是否和检查组关联
+        long count = checkItemDao.findCountByCheckItemId(id);
+        if(count > 0){
+            //当前检查项被引用，不能删除
+            throw new RuntimeException("当前检查项被引用，不能删除");
+        }
+        checkItemDao.deleteById(id);
+    }
+
+
 }
