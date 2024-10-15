@@ -1,5 +1,9 @@
 package com.pzl.service.Impl;
+
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.pzl.dao.CheckItemDao;
+import com.pzl.entity.PageResult;
 import com.pzl.service.CheckItemService;
 import com.pzl.pojo.CheckItem;
 
@@ -16,5 +20,13 @@ public class CheckItemServiceImpl implements CheckItemService{
     //新增
     public void add(CheckItem checkItem) {
         checkItemDao.add(checkItem);
+    }
+
+    @Override
+    public PageResult pageQuery(Integer currentPage, Integer pageSize, String queryString) {
+        //完成分页查询，基于myBatis框架提供的分页助手插件完成
+        PageHelper.startPage(currentPage,pageSize);
+        Page<CheckItem> page = checkItemDao.selectByCondition(queryString);
+        return new PageResult(page.getTotal(),page.getResult());
     }
 }

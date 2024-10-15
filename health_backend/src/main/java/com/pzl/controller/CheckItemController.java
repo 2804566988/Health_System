@@ -1,5 +1,7 @@
 package com.pzl.controller;
 import com.pzl.constant.MessageConstant;
+import com.pzl.entity.PageResult;
+import com.pzl.entity.QueryPageBean;
 import com.pzl.entity.Result;
 import com.pzl.pojo.CheckItem;
 import com.pzl.service.CheckItemService;
@@ -25,5 +27,15 @@ public class CheckItemController {
             return new Result(false, MessageConstant.ADD_CHECKITEM_FAIL);
         }
         return new Result(true,MessageConstant.ADD_CHECKITEM_SUCCESS);
+    }
+
+    //分页查询
+    @RequestMapping("/findPage.do")
+    public PageResult findPage(@RequestBody QueryPageBean queryPageBean){
+        PageResult pageResult = checkItemService.pageQuery(
+                queryPageBean.getCurrentPage(),
+                queryPageBean.getPageSize(),
+                queryPageBean.getQueryString());
+        return pageResult;
     }
 }
