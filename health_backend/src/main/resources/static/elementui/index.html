@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <!-- 引入ElementUI样式 -->
+      <link rel="stylesheet" href="../css/index.css">
+      <script src="../js/vue.js"></script>
+      <!-- 引入ElementUI组件库 -->
+      <script src="../css/index.js"></script>
+      <meta charset="UTF-8">
+      <title>Title</title>
+  </head>
+  <body>
+    <div id="app">
+        <el-button-group>
+            <el-button type="primary" icon="el-icon-arrow-left">上一页</el-button>
+            <el-button type="primary">下一页<i class="el-icon-arrow-right el-icon--right"></i></el-button>
+        </el-button-group>
+        <el-button-group>
+            <el-button type="primary" icon="el-icon-edit"></el-button>
+            <el-button type="primary" icon="el-icon-share"></el-button>
+            <el-button type="primary" icon="el-icon-delete"></el-button>
+        </el-button-group>
+    </div>
+    <script>
+      new Vue({
+        el:'#app'
+      });
+    </script>
+  </body>
+</html>

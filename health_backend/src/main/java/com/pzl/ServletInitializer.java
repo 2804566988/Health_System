@@ -1,4 +1,4 @@
-package com.pzl.health_backend;
+package com.pzl;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

@@ -1,13 +1,13 @@
-package com.pzl.health_backend;
+package com.pzl;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HealthBackendApplication {
+public class HealthCommonApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HealthBackendApplication.class, args);
+		SpringApplication.run(HealthCommonApplication.class, args);
 	}
 
 }
