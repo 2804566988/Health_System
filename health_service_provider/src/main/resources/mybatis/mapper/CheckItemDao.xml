@@ -9,11 +9,12 @@
             (#{code},#{name},#{sex},#{age},#{price},#{type},#{remark},#{attention})
     </insert>
 
+    <!--分页查询-->
     <select id="selectByCondition" parameterType="string"
             resultType="com.pzl.pojo.CheckItem">
         select * from t_checkitem
         <if test="value != null and value.length > 0">
-            where code = #{value} or name = #{value}
+            where code = #{value} or name like concat('%',#{value},'%')
         </if>
     </select>
 
@@ -60,6 +61,10 @@
 
     <select id="findById" parameterType="int" resultType="com.pzl.pojo.CheckItem">
         select * from t_checkitem where id = #{id}
+    </select>
+
+    <select id="findAll" resultType="com.pzl.pojo.CheckItem">
+        select * from t_checkitem
     </select>
 
 </mapper>

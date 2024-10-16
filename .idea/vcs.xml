@@ -2,9 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/health_backend" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/health_common" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/health_interface" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/health_service_provider" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/health_backend" vcs="" />
+    <mapping directory="$PROJECT_DIR$/health_common" vcs="" />
+    <mapping directory="$PROJECT_DIR$/health_interface" vcs="" />
+    <mapping directory="$PROJECT_DIR$/health_service_provider" vcs="" />
   </component>
 </project>

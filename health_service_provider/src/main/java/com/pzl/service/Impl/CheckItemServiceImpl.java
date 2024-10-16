@@ -13,7 +13,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-
+/*
+检查项服务
+ */
 @Service(interfaceClass = CheckItemService.class)
 @Transactional
 public class CheckItemServiceImpl implements CheckItemService{
@@ -49,9 +51,15 @@ public class CheckItemServiceImpl implements CheckItemService{
     public void edit(CheckItem checkItem) {
         checkItemDao.edit(checkItem);
     }
+
     //编辑回显表单
     public CheckItem findById(Integer id) {
         return checkItemDao.findById(id);
+    }
+
+    //查询全部
+    public List<CheckItem> findAll() {
+        return checkItemDao.findAll();
     }
 
 }
