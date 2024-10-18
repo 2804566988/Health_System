@@ -408,12 +408,17 @@
                 }).then(() => {
                     //点击确定按钮执行此代码
                     axios.get("/checkgroup/delete.do?id=" + row.id).then((res) => {
-                        //删除成功
-                        this.$message({
-                            message: res.data.message,
-                            type: 'success'
-                        });
-                        this.findPage();
+                        if (!res.data.flag) {
+                            //删除失败
+                            this.$message.error(res.data.message);
+                        } else {
+                            //删除成功
+                            this.$message({
+                                message: res.data.message,
+                                type: 'success'
+                            });
+                            this.findPage();
+                        }
                     }).catch((r) => {
                         this.showMessage(r);
                     });

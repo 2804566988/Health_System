@@ -10,12 +10,18 @@
         <module name="health_backend" />
         <module name="health_common" />
         <module name="health_interface" />
+        <module name="health_jobs" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="quartzdemo" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="health_jobs" options="" />
       <module name="health_parent" options="" />
+      <module name="quartzdemo" options="" />
     </option>
   </component>
 </project>

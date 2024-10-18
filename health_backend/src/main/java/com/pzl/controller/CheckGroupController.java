@@ -82,11 +82,24 @@ public class CheckGroupController {
     @RequestMapping("/delete.do")
     public Result delete(Integer id){
         try {
-            checkGroupService.delete(id);
+            checkGroupService.deleteById(id);
+        }catch (RuntimeException e){
+            return new Result(false,e.getMessage());
         }catch (Exception e){
             return new Result(false, MessageConstant.DELETE_CHECKGROUP_FAIL);
         }
         return new Result(true,MessageConstant.DELETE_CHECKGROUP_SUCCESS);
     }
 
+    //查询所有(用于SetMeal中展示检查组列表)
+    @RequestMapping("/findAll.do")
+    public Result findAll(){
+        List<CheckGroup> checkGroupList = checkGroupService.findAll();
+        if(checkGroupList != null && checkGroupList.size() > 0){
+            Result result = new Result(true, MessageConstant.QUERY_CHECKGROUP_SUCCESS);
+            result.setData(checkGroupList);
+            return result;
+        }
+        return new Result(false,MessageConstant.QUERY_CHECKGROUP_FAIL);
+    }
 }

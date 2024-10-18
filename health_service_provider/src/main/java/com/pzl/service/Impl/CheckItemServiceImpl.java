@@ -36,8 +36,7 @@ public class CheckItemServiceImpl implements CheckItemService{
     }
 
     //删除
-    @Override
-    public void delete(Integer id) throws RuntimeException{
+    public void deleteById(Integer id) throws RuntimeException{
         //查询当前检查项是否和检查组关联
         long count = checkItemDao.findCountByCheckItemId(id);
         if(count > 0){
@@ -57,7 +56,7 @@ public class CheckItemServiceImpl implements CheckItemService{
         return checkItemDao.findById(id);
     }
 
-    //查询全部
+    //查询全部(用于检查组中显示已选检查项)
     public List<CheckItem> findAll() {
         return checkItemDao.findAll();
     }

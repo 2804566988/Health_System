@@ -70,11 +70,21 @@ public class CheckGroupServiceImpl implements CheckGroupService {
     }
 
     //删除
-    public void delete(Integer id) {
-        //根据检查组id删除中间表数据（清理原有关联关系）
+    public void deleteById(Integer id) throws RuntimeException{
+        //查询当前检查组是否和套餐关联
+        long count = checkGroupDao.findCountByCheckGroupId(id);
+        if(count > 0){
+            //当前检查组被引用，不能删除
+            throw new RuntimeException("当前检查组被引用，不能删除");
+        }
+        //根据检查组id删除和检查项的中间表数据（清理原有关联关系）
         checkGroupDao.deleteAssociation(id);
         //根据id删除检查组基本信息
-        checkGroupDao.delete(id);
+        checkGroupDao.deleteById(id);
+    }
 
+    //查询所有(用于SetMeal中展示检查组列表)
+    public List<CheckGroup> findAll() {
+        return checkGroupDao.findAll();
     }
 }

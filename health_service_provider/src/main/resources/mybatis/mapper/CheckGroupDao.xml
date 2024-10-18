@@ -65,8 +65,17 @@
         delete from t_checkgroup_checkitem where checkgroup_id = #{id}
     </delete>
 
-    <delete id="delete" parameterType="int">
+    <delete id="deleteById" parameterType="int">
         delete from t_checkgroup where id = #{id}
     </delete>
+
+    <!--根据检查组id查询中间关系表-->
+    <select id="findCountByCheckGroupId" resultType="long" parameterType="int">
+        select count(*) from t_setmeal_checkgroup where checkgroup_id = #{checkgroup_id}
+    </select>
+
+    <select id="findAll" resultType="com.pzl.pojo.CheckGroup">
+        select * from t_checkgroup
+    </select>
 
 </mapper>

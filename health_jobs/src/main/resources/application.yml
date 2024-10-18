@@ -1,0 +1,7 @@
+server:
+  port: 88
+
+#redis配置
+spring:
+  redis:
+    host: 127.0.0.1

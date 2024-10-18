@@ -46,7 +46,7 @@ public class CheckItemController {
     @RequestMapping("/delete.do")
     public Result delete(Integer id){
         try {
-            checkItemService.delete(id);
+            checkItemService.deleteById(id);
         }catch (RuntimeException e){
             return new Result(false,e.getMessage());
         }catch (Exception e){
@@ -66,6 +66,7 @@ public class CheckItemController {
         return new Result(true,MessageConstant.EDIT_CHECKITEM_SUCCESS);
     }
 
+    //编辑数据回显
     @RequestMapping("/findById.do")
     public Result findById(Integer id){
         try{
@@ -78,7 +79,7 @@ public class CheckItemController {
         }
     }
 
-    //查询所有
+    //查询所有(用于CheckGroup中展示检查项列表)
     @RequestMapping("/findAll.do")
     public Result findAll(){
         List<CheckItem> checkItemList = checkItemService.findAll();
