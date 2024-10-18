@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50173
 File Encoding         : 65001
 
-Date: 2019-04-28 09:06:54
+Date: 2024-10-13 09:06:54
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -234,17 +234,17 @@ CREATE TABLE `t_member` (
 -- ----------------------------
 -- Records of t_member
 -- ----------------------------
-INSERT INTO `t_member` VALUES ('82', null, '小明', '1', '123456789000999999', '18511279942', '2019-03-08', null, null, null, null);
-INSERT INTO `t_member` VALUES ('83', null, '王美丽', '1', '132333333333333', '13412345678', '2019-03-11', null, null, null, null);
-INSERT INTO `t_member` VALUES ('84', null, 'test', null, null, '18511279942', '2019-03-13', null, null, null, null);
-INSERT INTO `t_member` VALUES ('85', null, null, null, null, null, '2019-03-06', null, null, null, null);
-INSERT INTO `t_member` VALUES ('86', null, null, null, null, null, '2019-04-04', null, null, null, null);
-INSERT INTO `t_member` VALUES ('87', null, null, null, null, null, '2019-02-06', null, null, null, null);
-INSERT INTO `t_member` VALUES ('88', null, null, null, null, null, '2019-04-10', null, null, null, null);
-INSERT INTO `t_member` VALUES ('89', null, null, null, null, null, '2018-12-01', null, null, null, null);
-INSERT INTO `t_member` VALUES ('90', null, null, null, null, null, '2018-12-02', null, null, null, null);
-INSERT INTO `t_member` VALUES ('91', null, null, null, null, null, '2018-02-01', null, null, null, null);
-INSERT INTO `t_member` VALUES ('92', null, '333', '2', '234234145432121345', '18019286521', '2019-04-19', null, null, null, null);
+INSERT INTO `t_member` VALUES ('82', null, '小明', '1', '123456789000999999', '18511279942', '2024-03-08', null, null, null, null);
+INSERT INTO `t_member` VALUES ('83', null, '王美丽', '1', '132333333333333', '13412345678', '2024-03-11', null, null, null, null);
+INSERT INTO `t_member` VALUES ('84', null, 'test', null, null, '18511279942', '2024-03-13', null, null, null, null);
+INSERT INTO `t_member` VALUES ('85', null, null, null, null, null, '2024-03-06', null, null, null, null);
+INSERT INTO `t_member` VALUES ('86', null, null, null, null, null, '2024-04-04', null, null, null, null);
+INSERT INTO `t_member` VALUES ('87', null, null, null, null, null, '2024-02-06', null, null, null, null);
+INSERT INTO `t_member` VALUES ('88', null, null, null, null, null, '2024-04-10', null, null, null, null);
+INSERT INTO `t_member` VALUES ('89', null, null, null, null, null, '2023-12-01', null, null, null, null);
+INSERT INTO `t_member` VALUES ('90', null, null, null, null, null, '2023-12-02', null, null, null, null);
+INSERT INTO `t_member` VALUES ('91', null, null, null, null, null, '2023-02-01', null, null, null, null);
+INSERT INTO `t_member` VALUES ('92', null, '333', '2', '234234145432121345', '18019286521', '2024-04-19', null, null, null, null);
 
 -- ----------------------------
 -- Table structure for `t_menu`
@@ -311,7 +311,7 @@ CREATE TABLE `t_order` (
 -- ----------------------------
 -- Records of t_order
 -- ----------------------------
-INSERT INTO `t_order` VALUES ('17', '84', '2019-04-28', '微信预约', '未到诊', '12');
+INSERT INTO `t_order` VALUES ('17', '84', '2024-04-28', '微信预约', '未到诊', '12');
 
 -- ----------------------------
 -- Table structure for `t_ordersetting`
@@ -328,55 +328,55 @@ CREATE TABLE `t_ordersetting` (
 -- ----------------------------
 -- Records of t_ordersetting
 -- ----------------------------
-INSERT INTO `t_ordersetting` VALUES ('13', '2019-03-04', '100', '100');
-INSERT INTO `t_ordersetting` VALUES ('14', '2019-03-05', '200', '0');
-INSERT INTO `t_ordersetting` VALUES ('15', '2019-03-06', '300', '0');
-INSERT INTO `t_ordersetting` VALUES ('16', '2019-03-07', '200', '0');
-INSERT INTO `t_ordersetting` VALUES ('17', '2019-03-08', '200', '1');
-INSERT INTO `t_ordersetting` VALUES ('18', '2019-03-09', '200', '0');
-INSERT INTO `t_ordersetting` VALUES ('19', '2019-03-10', '200', '0');
-INSERT INTO `t_ordersetting` VALUES ('20', '2019-03-11', '200', '3');
-INSERT INTO `t_ordersetting` VALUES ('21', '2019-03-13', '300', '1');
-INSERT INTO `t_ordersetting` VALUES ('22', '2019-03-14', '600', '0');
-INSERT INTO `t_ordersetting` VALUES ('23', '2019-03-15', '500', '1');
-INSERT INTO `t_ordersetting` VALUES ('24', '2019-03-16', '500', '0');
-INSERT INTO `t_ordersetting` VALUES ('25', '2019-03-17', '400', '0');
-INSERT INTO `t_ordersetting` VALUES ('26', '2019-03-19', '300', '1');
-INSERT INTO `t_ordersetting` VALUES ('27', '2019-04-01', '300', '0');
-INSERT INTO `t_ordersetting` VALUES ('28', '2019-04-02', '300', '0');
-INSERT INTO `t_ordersetting` VALUES ('29', '2019-04-19', '300', '0');
-INSERT INTO `t_ordersetting` VALUES ('30', '2019-03-20', '200', '1');
-INSERT INTO `t_ordersetting` VALUES ('31', '2019-05-01', '300', '0');
-INSERT INTO `t_ordersetting` VALUES ('32', '2019-03-28', '200', '1');
-INSERT INTO `t_ordersetting` VALUES ('33', '2019-04-03', '400', '0');
-INSERT INTO `t_ordersetting` VALUES ('34', '2019-09-30', '800', '0');
-INSERT INTO `t_ordersetting` VALUES ('35', '2019-04-04', '400', '0');
-INSERT INTO `t_ordersetting` VALUES ('36', '2019-04-05', '300', '0');
-INSERT INTO `t_ordersetting` VALUES ('37', '2019-04-14', '200', '1');
-INSERT INTO `t_ordersetting` VALUES ('38', '2019-04-13', '200', '0');
-INSERT INTO `t_ordersetting` VALUES ('39', '2019-04-17', '400', '0');
-INSERT INTO `t_ordersetting` VALUES ('40', '2019-04-18', '1', '1');
-INSERT INTO `t_ordersetting` VALUES ('41', '2019-04-20', '300', '1');
-INSERT INTO `t_ordersetting` VALUES ('42', '2019-04-21', '300', '1');
-INSERT INTO `t_ordersetting` VALUES ('43', '2019-04-22', '300', '1');
-INSERT INTO `t_ordersetting` VALUES ('44', '2019-04-23', '300', '0');
-INSERT INTO `t_ordersetting` VALUES ('45', '2019-04-24', '300', '0');
-INSERT INTO `t_ordersetting` VALUES ('46', '2019-04-25', '400', '0');
-INSERT INTO `t_ordersetting` VALUES ('47', '2019-04-26', '300', '0');
-INSERT INTO `t_ordersetting` VALUES ('48', '2019-04-27', '300', '0');
-INSERT INTO `t_ordersetting` VALUES ('49', '2019-04-28', '300', '2');
-INSERT INTO `t_ordersetting` VALUES ('50', '2019-04-29', '300', '0');
-INSERT INTO `t_ordersetting` VALUES ('51', '2019-04-30', '300', '0');
-INSERT INTO `t_ordersetting` VALUES ('52', '2019-05-02', '300', '0');
-INSERT INTO `t_ordersetting` VALUES ('53', '2019-05-03', '300', '0');
-INSERT INTO `t_ordersetting` VALUES ('54', '2019-05-04', '300', '0');
-INSERT INTO `t_ordersetting` VALUES ('55', '2019-05-05', '300', '0');
-INSERT INTO `t_ordersetting` VALUES ('56', '2019-05-06', '300', '0');
-INSERT INTO `t_ordersetting` VALUES ('57', '2019-05-07', '300', '0');
-INSERT INTO `t_ordersetting` VALUES ('58', '2019-05-08', '300', '0');
-INSERT INTO `t_ordersetting` VALUES ('59', '2019-05-09', '300', '0');
-INSERT INTO `t_ordersetting` VALUES ('60', '2019-05-10', '300', '0');
-INSERT INTO `t_ordersetting` VALUES ('61', '2019-05-11', '300', '0');
+INSERT INTO `t_ordersetting` VALUES ('13', '2024-03-04', '100', '100');
+INSERT INTO `t_ordersetting` VALUES ('14', '2024-03-05', '200', '0');
+INSERT INTO `t_ordersetting` VALUES ('15', '2024-03-06', '300', '0');
+INSERT INTO `t_ordersetting` VALUES ('16', '2024-03-07', '200', '0');
+INSERT INTO `t_ordersetting` VALUES ('17', '2024-03-08', '200', '1');
+INSERT INTO `t_ordersetting` VALUES ('18', '2024-03-09', '200', '0');
+INSERT INTO `t_ordersetting` VALUES ('19', '2024-03-10', '200', '0');
+INSERT INTO `t_ordersetting` VALUES ('20', '2024-03-11', '200', '3');
+INSERT INTO `t_ordersetting` VALUES ('21', '2024-03-13', '300', '1');
+INSERT INTO `t_ordersetting` VALUES ('22', '2024-03-14', '600', '0');
+INSERT INTO `t_ordersetting` VALUES ('23', '2024-03-15', '500', '1');
+INSERT INTO `t_ordersetting` VALUES ('24', '2024-03-16', '500', '0');
+INSERT INTO `t_ordersetting` VALUES ('25', '2024-03-17', '400', '0');
+INSERT INTO `t_ordersetting` VALUES ('26', '2024-03-19', '300', '1');
+INSERT INTO `t_ordersetting` VALUES ('27', '2024-04-01', '300', '0');
+INSERT INTO `t_ordersetting` VALUES ('28', '2024-04-02', '300', '0');
+INSERT INTO `t_ordersetting` VALUES ('29', '2024-04-19', '300', '0');
+INSERT INTO `t_ordersetting` VALUES ('30', '2024-03-20', '200', '1');
+INSERT INTO `t_ordersetting` VALUES ('31', '2024-05-01', '300', '0');
+INSERT INTO `t_ordersetting` VALUES ('32', '2024-03-28', '200', '1');
+INSERT INTO `t_ordersetting` VALUES ('33', '2024-04-03', '400', '0');
+INSERT INTO `t_ordersetting` VALUES ('34', '2024-09-30', '800', '0');
+INSERT INTO `t_ordersetting` VALUES ('35', '2024-04-04', '400', '0');
+INSERT INTO `t_ordersetting` VALUES ('36', '2024-04-05', '300', '0');
+INSERT INTO `t_ordersetting` VALUES ('37', '2024-04-14', '200', '1');
+INSERT INTO `t_ordersetting` VALUES ('38', '2024-04-13', '200', '0');
+INSERT INTO `t_ordersetting` VALUES ('39', '2024-04-17', '400', '0');
+INSERT INTO `t_ordersetting` VALUES ('40', '2024-04-18', '1', '1');
+INSERT INTO `t_ordersetting` VALUES ('41', '2024-04-20', '300', '1');
+INSERT INTO `t_ordersetting` VALUES ('42', '2024-04-21', '300', '1');
+INSERT INTO `t_ordersetting` VALUES ('43', '2024-04-22', '300', '1');
+INSERT INTO `t_ordersetting` VALUES ('44', '2024-04-23', '300', '0');
+INSERT INTO `t_ordersetting` VALUES ('45', '2024-04-24', '300', '0');
+INSERT INTO `t_ordersetting` VALUES ('46', '2024-04-25', '400', '0');
+INSERT INTO `t_ordersetting` VALUES ('47', '2024-04-26', '300', '0');
+INSERT INTO `t_ordersetting` VALUES ('48', '2024-04-27', '300', '0');
+INSERT INTO `t_ordersetting` VALUES ('49', '2024-04-28', '300', '2');
+INSERT INTO `t_ordersetting` VALUES ('50', '2024-04-29', '300', '0');
+INSERT INTO `t_ordersetting` VALUES ('51', '2024-04-30', '300', '0');
+INSERT INTO `t_ordersetting` VALUES ('52', '2024-05-02', '300', '0');
+INSERT INTO `t_ordersetting` VALUES ('53', '2024-05-03', '300', '0');
+INSERT INTO `t_ordersetting` VALUES ('54', '2024-05-04', '300', '0');
+INSERT INTO `t_ordersetting` VALUES ('55', '2024-05-05', '300', '0');
+INSERT INTO `t_ordersetting` VALUES ('56', '2024-05-06', '300', '0');
+INSERT INTO `t_ordersetting` VALUES ('57', '2024-05-07', '300', '0');
+INSERT INTO `t_ordersetting` VALUES ('58', '2024-05-08', '300', '0');
+INSERT INTO `t_ordersetting` VALUES ('59', '2024-05-09', '300', '0');
+INSERT INTO `t_ordersetting` VALUES ('60', '2024-05-10', '300', '0');
+INSERT INTO `t_ordersetting` VALUES ('61', '2024-05-11', '300', '0');
 
 -- ----------------------------
 -- Table structure for `t_permission`
