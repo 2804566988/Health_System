@@ -9,4 +9,7 @@ public interface OrderSettingService {
     void add(List<OrderSetting> list);
     //根据日期查询预约设置数据(获取指定日期所在月份的预约设置数据)
     List<Map<String,?>> getOrderSettingByMonth(String date);
+
+    void editNumberByDate(OrderSetting orderSetting);
+
 }
