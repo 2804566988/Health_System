@@ -17,4 +17,6 @@ public interface SetmealService {
     Setmeal findById(Integer id);
 
     void deleteById(Integer id);
+
+    List<Setmeal> findAll();
 }

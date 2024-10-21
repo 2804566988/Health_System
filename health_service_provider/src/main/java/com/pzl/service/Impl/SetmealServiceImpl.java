@@ -57,6 +57,8 @@ public class SetmealServiceImpl implements SetmealService {
 
     //编辑套餐，同时需要更新和检查组的关联关系
     public void edit(Setmeal setmeal, Integer[] checkGroupIds) {
+        //删除Redis中的图片名称（已存入数据库的图片）
+        redisTemplate.opsForSet().remove(RedisConstant.SETMEAL_PIC_DB_RESOURCES, setmealDao.findById(setmeal.getId()).getImg());
         //根据套餐id删除中间表数据（清理原有关联关系）
         setmealDao.deleteAssociation(setmeal.getId());
         //向中间表(t_setmeal_checkgroup)插入数据（建立套餐和检查组关联关系）
@@ -84,8 +86,9 @@ public class SetmealServiceImpl implements SetmealService {
         setmealDao.deleteAssociation(id);
         //根据id删除套餐基本信息
         setmealDao.deleteById(id);
-
     }
 
-
+    public List<Setmeal> findAll() {
+        return setmealDao.findAll();
+    }
 }

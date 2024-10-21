@@ -79,4 +79,8 @@
         delete from t_setmeal where id = #{id}
     </delete>
 
+    <select id="findAll" resultType="com.pzl.pojo.Setmeal">
+        select * from t_setmeal
+    </select>
+
 </mapper>

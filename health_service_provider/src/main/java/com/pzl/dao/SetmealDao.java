@@ -27,4 +27,7 @@ public interface SetmealDao {
 
     //删除
     void deleteById(Integer id);
+
+
+    List<Setmeal> findAll();
 }
