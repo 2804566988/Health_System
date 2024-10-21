@@ -159,6 +159,7 @@
         <option value="Maven: log4j:log4j:1.2.16" />
         <option value="Maven: jline:jline:0.9.94" />
         <option value="Maven: io.netty:netty:3.7.0.Final" />
+        <option value="Maven: com.alibaba:fastjson:1.2.72" />
         <option value="Maven: org.springframework.boot:spring-boot-starter-quartz:2.3.7.RELEASE" />
         <option value="Maven: org.quartz-scheduler:quartz:2.3.2" />
         <option value="Maven: com.mchange:mchange-commons-java:0.2.15" />

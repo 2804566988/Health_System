@@ -9,6 +9,7 @@
         <module name="health_service_provider" />
         <module name="health_backend" />
         <module name="health_common" />
+        <module name="health_mobile" />
         <module name="health_interface" />
         <module name="health_jobs" />
       </profile>
@@ -20,6 +21,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="health_jobs" options="" />
+      <module name="health_mobile" options="" />
       <module name="health_parent" options="" />
       <module name="quartzdemo" options="" />
     </option>
