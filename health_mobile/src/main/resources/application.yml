@@ -18,6 +18,14 @@ dubbo:
 spring:
   redis:
     host: 127.0.0.1
+
+#  # 配置热部署
+#  devtools:
+#    restart:
+#      enabled: true # 配置热部署
+#      additional-paths: src/main
+#      exclude: WEB-INF/**
+
   #文件上传
   servlet:
     multipart:
