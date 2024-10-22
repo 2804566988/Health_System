@@ -91,4 +91,9 @@ public class SetmealServiceImpl implements SetmealService {
     public List<Setmeal> findAll() {
         return setmealDao.findAll();
     }
+
+    //返回套餐详情
+    public Setmeal findDetailById(Integer id) {
+        return setmealDao.findDetailById(id);
+    }
 }

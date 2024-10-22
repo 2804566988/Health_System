@@ -30,4 +30,7 @@ public interface SetmealDao {
 
 
     List<Setmeal> findAll();
+
+    //返回套餐详情
+    Setmeal findDetailById(Integer id);
 }

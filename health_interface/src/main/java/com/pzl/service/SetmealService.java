@@ -19,4 +19,7 @@ public interface SetmealService {
     void deleteById(Integer id);
 
     List<Setmeal> findAll();
+
+    Setmeal findDetailById(Integer id);
+
 }

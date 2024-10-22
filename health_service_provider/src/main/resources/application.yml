@@ -45,7 +45,7 @@ spring:
     # 模板路径
     template-loader-path: classpath:/templates/
 #freemarker文件输出地址
-out_put_path: D:/IdeaProjects9/health_parent/health_mobile/src/main/resources/static/pages
+out_put_path: D:\Desktop\home\java\health_parent\health_mobile\src\main\resources\static\pages
 
 mybatis:
   # 指定全局配置文件位置
