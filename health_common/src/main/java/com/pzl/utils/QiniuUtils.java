@@ -14,6 +14,7 @@ import com.qiniu.util.Auth;
  * 七牛云工具类
  */
 public class QiniuUtils {
+    //外链域名：http://slh8cqdd7.hn-bkt.clouddn.com/
     static String accessKey = "VLgVbayO1h5sdKkJpJcLDd8BT6SexItDP_wSwz_E";
     static String secretKey = "QpWOUvFlhSrkmD-xqZ9fjKnRbw4tKm1smafnaKIr";
     static String bucket = "health-pzl";

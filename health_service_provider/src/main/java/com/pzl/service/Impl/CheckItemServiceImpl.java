@@ -1,4 +1,4 @@
-package com.pzl.service.Impl;
+package com.pzl.service.impl;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;

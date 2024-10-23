@@ -109,4 +109,9 @@
     <select id="findDetailById" resultMap="findByIdResultMap">
         select * from t_setmeal  where id=#{id}
     </select>
+
+    <!--更新已预约人数-->
+    <update id="editReservationsByOrderDate" parameterType="com.pzl.pojo.OrderSetting">
+        update t_ordersetting set reservations = #{reservations} where orderDate = #{orderDate}
+    </update>
 </mapper>

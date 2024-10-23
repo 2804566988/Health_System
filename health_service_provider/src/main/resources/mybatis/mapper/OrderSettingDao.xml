@@ -22,4 +22,13 @@
     <select id="getOrderSettingByMonth" parameterType="hashmap" resultType="com.pzl.pojo.OrderSetting">
         select * from t_ordersetting where orderDate between #{dateBegin} and #{dateEnd}
     </select>
+
+    <!--根据日期查询预约设置信息-->
+    <select id="findByOrderDate" parameterType="date" resultType="com.pzl.pojo.OrderSetting">
+        select * from t_ordersetting where orderDate = #{orderDate}
+    </select>
+    <!--更新已预约人数-->
+    <update id="editReservationsByOrderDate" parameterType="com.pzl.pojo.OrderSetting">
+        update t_ordersetting set reservations = #{reservations} where orderDate = #{orderDate}
+    </update>
 </mapper>

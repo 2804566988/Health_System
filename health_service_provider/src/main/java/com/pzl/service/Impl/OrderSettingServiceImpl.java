@@ -1,4 +1,4 @@
-package com.pzl.service.Impl;
+package com.pzl.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.pzl.dao.OrderSettingDao;
