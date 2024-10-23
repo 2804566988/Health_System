@@ -45,4 +45,24 @@ public class ValidateCodeController {
         //验证码发送成功
         return new Result(true, MessageConstant.SEND_VALIDATECODE_SUCCESS);
     }
+
+    //手机快速登录时发送手机验证码
+    @RequestMapping("/send4Login.do")
+    public Result send4Login(String telephone){
+        Integer code = ValidateCodeUtils.generateValidateCode(6); //生成6位数字验证码
+//        try {
+//            //发送短信
+//            SMSUtils.sendShortMessage(SMSUtils.VALIDATE_CODE,telephone,code.toString());
+//        } catch (ClientException e) {
+//            e.printStackTrace();
+//            //验证码发送失败
+//            return new Result(false, MessageConstant.SEND_VALIDATECODE_FAIL);
+//        }
+        System.out.println("发送的手机验证码为：" + code);
+        //将生成的验证码缓存到redis
+        redisTemplate.opsForValue().set(
+                telephone+ RedisMessageConstant.SENDTYPE_LOGIN,code.toString(),5 * 60, TimeUnit.SECONDS);
+        //验证码发送成功
+        return new Result(true, MessageConstant.SEND_VALIDATECODE_SUCCESS);
+    }
 }
