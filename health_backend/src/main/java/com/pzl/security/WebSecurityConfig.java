@@ -51,7 +51,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 //密码文本框 name属性
                 .passwordParameter("password")
                 //如果登录成功会跳转到哪里
-                .defaultSuccessUrl("/pages/main.html")
+                .defaultSuccessUrl("/pages/main.html",true)
                 //如果登录失败会跳转到哪里
                 .failureForwardUrl("/login.html")
                 .permitAll()
