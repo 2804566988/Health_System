@@ -35,7 +35,7 @@ public class OrderSettingServiceImpl implements OrderSettingService {
         }
     }
 
-    public List<Map<String,?>> getOrderSettingByMonth(String date) {
+    public List<Map<String, ?>> getOrderSettingByMonth(String date) {
         //将 2024-10 按"-"分割为年月
         String[] split = date.split("-");
         //每月第一天
@@ -74,10 +74,10 @@ public class OrderSettingServiceImpl implements OrderSettingService {
 
         //将该月第一天和最后一天传入，返回该月所有日期的预约情况列表
         Map<String, String> map = new HashMap<>();
-        map.put("dateBegin",dateBegin);
-        map.put("dateEnd",dateEnd);
+        map.put("dateBegin", dateBegin);
+        map.put("dateEnd", dateEnd);
         List<OrderSetting> list = orderSettingDao.getOrderSettingByMonth(map);
-        List<Map<String,?>> data = new ArrayList<>();
+        List<Map<String, ?>> data = new ArrayList<>();
         for (OrderSetting orderSetting : list) {
             Map<String, Integer> orderSettingMap = new HashMap<>();
             orderSettingMap.put("date", orderSetting.getOrderDate().getDate());//获得日期（几号）
