@@ -32,11 +32,10 @@ public class SetmealServiceImpl implements SetmealService {
     StringRedisTemplate redisTemplate;  //操作k-v都是字符串的
     @Autowired
     private SetmealDao setmealDao;
-
     @Autowired
     private FreeMarkerConfigurer freeMarkerConfigurer;
 
-    @Value("${out_put_path}")//从属性文件读取输出目录的路径
+    @Value("${out_put_path}")//从src/main/resources/application.yml属性文件读取输出目录的路径
     private String outputpath;
 
     //新增套餐

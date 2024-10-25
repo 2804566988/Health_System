@@ -17,7 +17,7 @@
         <module>health_interface</module>
         <module>health_backend</module>
         <module>health_service_provider</module>
-        <module>health_mobile</module>
+<!--        <module>health_mobile</module>-->
 <!--        <module>spring_security_demo</module>-->
     </modules>
 </project>

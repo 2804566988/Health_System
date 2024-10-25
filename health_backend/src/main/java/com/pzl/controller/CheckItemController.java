@@ -5,6 +5,7 @@ import com.pzl.entity.QueryPageBean;
 import com.pzl.entity.Result;
 import com.pzl.pojo.CheckItem;
 import com.pzl.service.CheckItemService;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,6 +23,7 @@ public class CheckItemController {
     private CheckItemService checkItemService;
 
     //新增
+    @PreAuthorize("hasAuthority('CHECKITEM_ADD')")
     @RequestMapping("/add.do")
     public Result add(@RequestBody CheckItem checkItem){
         try {
@@ -43,6 +45,7 @@ public class CheckItemController {
     }
 
     //删除
+    @PreAuthorize("hasAuthority('CHECKITEM_DELETE')")
     @RequestMapping("/delete.do")
     public Result delete(Integer id){
         try {
@@ -56,6 +59,7 @@ public class CheckItemController {
     }
 
     //编辑
+    @PreAuthorize("hasAuthority('CHECKITEM_EDIT')")
     @RequestMapping("/edit.do")
     public Result edit(@RequestBody CheckItem checkItem){
         try {

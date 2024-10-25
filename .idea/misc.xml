@@ -7,6 +7,7 @@
     <file type="web" url="file://$PROJECT_DIR$/health_mobile" />
     <file type="web" url="file://$PROJECT_DIR$/health_service_provider" />
     <file type="web" url="file://$PROJECT_DIR$/quartzdemo" />
+    <file type="web" url="file://$PROJECT_DIR$/spring_security_demo" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
