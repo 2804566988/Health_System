@@ -71,6 +71,7 @@ public class CheckItemController {
     }
 
     //编辑数据回显
+    @PreAuthorize("hasAuthority('CHECKITEM_EDIT')")
     @RequestMapping("/findById.do")
     public Result findById(Integer id){
         try{

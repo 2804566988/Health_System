@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pzl.dao.OrderSettingListDao">
+    <resultMap id="OrderFullInfoResultMap" type="com.pzl.pojo.Member" autoMapping="true">
+        <!--member表主键-->
+        <id property="id" column="id"/>
+        <result property="fileNumber" column="fileNumber"/>
+        <result property="name" column="name"/>
+        <result property="sex" column="sex"/>
+        <result property="idCard" column="idCard"/>
+        <result property="phoneNumber" column="phoneNumber"/>
+        <result property="regTime" column="regTime"/>
+        <result property="password" column="password"/>
+        <result property="email" column="email"/>
+        <result property="birthday" column="birthday"/>
+        <result property="remark" column="remark"/>
+        <!--关联订单表-->
+        <collection property="orders" javaType="com.pzl.pojo.Order" autoMapping="true">
+            <!--订单表主键-->
+            <id property="id" column="id"/>
+            <result property="memberId" column="member_id"/>
+            <result property="orderDate" column="orderDate"/>
+            <result property="orderType" column="orderType"/>
+            <result property="orderStatus" column="orderStatus"/>
+            <result property="setmealId" column="setmeal_id"/>
+        </collection>
+    </resultMap>
+
+    <!--根据订单号 查询订单，查询出所属用户，并且查询出订单的详情，及订单详情中的对应的商品信息-->
+    <select id="selectOrderWithMemberAndSetmeal" resultMap="OrderFullInfoResultMap">
+        select
+            m.id as member_id,
+            o.orderDate as orderDate,
+            m.name as name,
+            m.phoneNumber as phoneNumber,
+            o.orderStatus as orderStatus,
+            o.setmeal_id as setmeal_id
+        from t_order o inner join t_member m on o.id = m.id
+    </select>
+
+</mapper>

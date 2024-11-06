@@ -17,6 +17,15 @@ public class Order implements Serializable{
     private String orderType;//预约类型 电话预约/微信预约
     private String orderStatus;//预约状态（是否到诊）
     private Integer setmealId;//体检套餐id
+    private Member member;
+
+    public Member getMember() {
+        return member;
+    }
+
+    public void setMember(Member member) {
+        this.member = member;
+    }
 
     public Order() {
     }

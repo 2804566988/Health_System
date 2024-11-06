@@ -2,6 +2,7 @@ package com.pzl.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * 会员
@@ -18,6 +19,16 @@ public class Member implements Serializable{
     private String email;//邮箱
     private Date birthday;//出生日期
     private String remark;//备注
+
+    private List<Order> orders;
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
+    }
 
     public Integer getId() {
         return id;

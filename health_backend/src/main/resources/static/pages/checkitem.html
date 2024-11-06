@@ -279,6 +279,8 @@
                             } else {
                                 this.$message.error(response.data.message);
                             }
+                        }).catch((r) => {
+                            this.showMessage(r);
                         }).finally(() => {
                             this.findPage();
                         });
@@ -325,6 +327,8 @@
                     } else {
                         this.$message.error("获取数据失败，请刷新当前页面");
                     }
+                }).catch((r) => {
+                    this.showMessage(r);
                 });
             },
             //切换页码
