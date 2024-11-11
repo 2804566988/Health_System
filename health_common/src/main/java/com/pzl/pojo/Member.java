@@ -1,6 +1,7 @@
 package com.pzl.pojo;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -19,8 +20,7 @@ public class Member implements Serializable{
     private String email;//邮箱
     private Date birthday;//出生日期
     private String remark;//备注
-
-    private List<Order> orders;
+    private List<Order> orders = new ArrayList<>();
 
     public List<Order> getOrders() {
         return orders;

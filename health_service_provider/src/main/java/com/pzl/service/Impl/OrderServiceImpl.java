@@ -1,11 +1,15 @@
 package com.pzl.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.pzl.constant.MessageConstant;
 import com.pzl.dao.MemberDao;
 import com.pzl.dao.OrderDao;
 import com.pzl.dao.OrderSettingDao;
+import com.pzl.entity.PageResult;
 import com.pzl.entity.Result;
+import com.pzl.pojo.CheckGroup;
 import com.pzl.pojo.Member;
 import com.pzl.pojo.Order;
 import com.pzl.pojo.OrderSetting;
@@ -99,5 +103,13 @@ public class OrderServiceImpl implements OrderService{
             map.put("orderDate",DateUtils.parseDate2String(orderDate));
         }
         return map;
+    }
+
+    @Override
+    public PageResult pageQuery(Integer currentPage, Integer pageSize, String queryString) {
+        //完成分页查询，基于myBatis框架提供的分页助手插件完成
+        PageHelper.startPage(currentPage, pageSize);
+        Page<Order> page = orderDao.selectByCondition(queryString);
+        return new PageResult(page.getTotal(), page.getResult());
     }
 }

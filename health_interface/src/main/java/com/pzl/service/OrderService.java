@@ -1,5 +1,6 @@
 package com.pzl.service;
 
+import com.pzl.entity.PageResult;
 import com.pzl.entity.Result;
 
 import java.util.Map;
@@ -13,4 +14,5 @@ public interface OrderService {
     //根据id查询预约信息，包括体检人信息、套餐信息
     Map findById(Integer id) throws Exception;
 
+    PageResult pageQuery(Integer currentPage, Integer pageSize, String queryString);
 }

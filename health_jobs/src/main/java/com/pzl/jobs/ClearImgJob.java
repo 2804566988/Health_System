@@ -16,7 +16,7 @@ public class ClearImgJob {
     @Autowired
     StringRedisTemplate redisTemplate;  //操作k-v都是字符串
     //定时任务每日上午四点触发* * 4 * * ?
-    @Scheduled(cron = "0/5 * * * * ? *")
+    @Scheduled(cron = "0/5 * * * * ?")
     public void clearImg(){
         //根据Redis中保存的两个set集合进行差值计算，获得垃圾图片名称集合
         //sdiff方法是计算两个集合的差值

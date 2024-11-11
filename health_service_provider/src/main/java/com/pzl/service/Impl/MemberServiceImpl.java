@@ -1,7 +1,11 @@
 package com.pzl.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.pzl.dao.MemberDao;
+import com.pzl.entity.PageResult;
+import com.pzl.pojo.CheckItem;
 import com.pzl.pojo.Member;
 import com.pzl.service.MemberService;
 import com.pzl.utils.MD5Utils;

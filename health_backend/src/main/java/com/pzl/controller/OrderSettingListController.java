@@ -6,7 +6,7 @@ import com.pzl.entity.PageResult;
 import com.pzl.entity.QueryPageBean;
 import com.pzl.entity.Result;
 import com.pzl.pojo.Setmeal;
-import com.pzl.service.OrderSettingListService;
+import com.pzl.service.OrderService;
 import com.pzl.service.SetmealService;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,14 +21,14 @@ import java.util.List;
 @RequestMapping("/ordersettinglist")
 public class OrderSettingListController {
     @Reference
-    private OrderSettingListService orderSettingListService;
+    private OrderService orderService;
     @Reference
     private  SetmealService setmealService;
 
     //分页查询
     @RequestMapping("/findPage.do")
     public PageResult findPage(@RequestBody QueryPageBean queryPageBean){
-        PageResult pageResult = orderSettingListService.pageQuery(
+        PageResult pageResult = orderService.pageQuery(
                 queryPageBean.getCurrentPage(),
                 queryPageBean.getPageSize(),
                 queryPageBean.getQueryString()

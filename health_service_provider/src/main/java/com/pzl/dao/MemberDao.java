@@ -1,6 +1,7 @@
 package com.pzl.dao;
 
 import com.github.pagehelper.Page;
+import com.pzl.pojo.CheckGroup;
 import com.pzl.pojo.Member;
 
 import java.util.List;

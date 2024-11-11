@@ -1,5 +1,6 @@
 package com.pzl.dao;
 
+import com.github.pagehelper.Page;
 import com.pzl.pojo.Order;
 
 import java.util.List;
@@ -12,4 +13,6 @@ public interface OrderDao {
     List<Order> findByCondition(Order order);
 
     Map findById4Detail(Integer id);
+
+    Page<Order> selectByCondition(String queryString);
 }

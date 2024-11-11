@@ -1,5 +1,6 @@
 package com.pzl.service;
 
+import com.pzl.entity.PageResult;
 import com.pzl.pojo.Member;
 
 import java.util.List;
@@ -14,5 +15,4 @@ public interface MemberService {
     Member findByTelephone(String telephone);
 
     List<Integer> findMemberCountByMonth(List<String> list);
-
 }
